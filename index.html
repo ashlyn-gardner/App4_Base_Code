@@ -102,75 +102,75 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!--Added page one of the survey-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+        <p>Are your eyes watery or itchy?</p> <!--Inputted the first survey question-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!--Added page two of the survey-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have a fever?</p> <!--Inputted the second survey question-->
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
 </div>	
 	
-<div class="page" id="three">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="three"> <!--Added page three of the survey-->
+	<div id="header" class="w3-container w3-flat-carrot"> 
 		<h1>Question 3</h1>
 	</div>	
 
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p> 
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Do you have a sore throat?</p> <!--Inputted the third survey question-->
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
 </div>
 
-<div class="page" id="four">
+<div class="page" id="four"> <!--Added page four of the survey-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p> 
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	<p>Are your symptoms seasonal or chronic?</p> <!--Inputted the third survey question-->
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
 </div>
 
 	
-<div class="page" id="five"> <!--Adding a page for the results to be computed--> 
+<div class="page" id="five"> <!--Added a page for the results to be computed--> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Click below for your results:</p> 
-		<a href="#six" onclick="Resultspercentage();"class="w3-btn w3-black"> Compute Results </a>
+	<p>Click below for your results:</p> <!--Added a subtitle to direct the user to their results--> 
+		<a href="#six" onclick="Resultspercentage();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
 	
 	</div>
 </div>
 
-<div class="page" id="six"> <!--Adding a page for the results to be displayed--> 
+<div class="page" id="six"> <!--Added a page for the results to be displayed--> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<div id="results" class="w3-container">
 	<script>
-	document.write(results) 
+	document.write(results) <!--Added a command for the display of the survey results-->
 		<script>	
 	</div>
 </div>
