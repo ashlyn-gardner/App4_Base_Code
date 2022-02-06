@@ -39,7 +39,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var anxiety_count = 0;
         var depression_count = 0;
 
-
+	
         function anxietyAdd(){
             anxiety_count = anxiety_count + 1;
 
@@ -47,27 +47,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function depressionAdd(){
             depression_count = depression_count + 1;
-		
         }
-
-	function anxietyFinal(){ 
-		anxiety_count = anxiety_count * 1/8; 
-		depression_count = depression_count * 1/8;
+	
+	function anxietyFinal(){ <!--Added this command to calculate the results--> 
+		anxiety_count = anxiety_count * 1/4; 
+		depression_count = depression_count * 1/4;
 	}
 	
-	function Resultspercentage(){ <!--Added this command to display the results breakdown--> 
+	function Resultspercentage(){ <!--Added this command to display the results breakdown by percentage--> 
 		var resultText = document.getElementById("results");
 		var depressionpercent= (depression_count)
-		var anxietypercent= (anxiety_count)
+		var anxiety= (anxiety_count)
 		resultText.innerHTML = "Probability it is depression =" + depressionpercent + "<br> Probability it is anxiety =" + anxietypercent;
 		
 	}
-	
+
   </script>
 
 
 
-<style>	
+<style>		
 .body {
      margin: 0em;
 }
@@ -87,38 +86,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
-	
+
 img, object{
             	max-height:90%;
         	max-width:90%;
+	
 }
 </style>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Mental Health Assessment: Anxiety or Depression?</h1> <!--Changed the title of the survey-->
+	<h1>Mental Health Assessment: Anxiety or Depression?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you not feeling yourself but wonder if it is related to your mental health? Answer a few short questions to find out!</p>
+	<p>Are you not feeling yourself but wonder if it is related to your mental health? Answer a few short questions to find out!</p> <!--Changed the title of the survey-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	
-<div class="page" id="eleven"> <!--Added a page for the thank you image to be displayed--> 
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Thank You</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-	<p>Thank you for taking this self-assessment!</p> <!--Added a subtitle to thank the user for completing the survey--> 
-		<img src="https://media.istockphoto.com/vectors/flag-thank-you-old-school-flag-banner-with-text-vector-id1183769974?k=20&m=1183769974&s=612x612&w=0&h=i7XQ7AGzPy8W1-BVDRhIYBogaiAwz8bsKBVn9cYNhj8=" alt="Thank You" style="width:500px;height:600px;"> <!--Added this command to display an image--> 
-	
-	</div>
-</div>
 
 <div class="page" id="one"> <!--Added page one of the survey-->
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -126,11 +114,10 @@ img, object{
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you usually feel sad, alone, or hopeless?</p> <!--Input the first survey question--> 
-		<a href="#two" onclick="depressionAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#two" onclick="anxietyAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
+        <p>Do you frequently feel nervous, worried, or on edge?</p> <!--Input the first survey question-->
+		<a href="#two"  onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#two"  onclick="anxietyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
     	</div>
-	
 </div>
 
 <div class="page" id="two"> <!--Added page two of the survey-->
@@ -139,111 +126,77 @@ img, object{
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you frequently feel nervous, worried, or on edge?</p> <!--Input the second survey question--> 
-		<a href="#three" onclick="anxietyAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#three" onclick="depressionAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
+		<p>Do you have trouble falling asleep, staying asleep, or oversleeping for extended periods of time?</p> <!--Input the second survey question-->
+		<a href="#three"  onclick="anxietyAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#three"  onclick="anxietyAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
 </div>	
 	
 <div class="page" id="three"> <!--Added page three of the survey-->
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-carrot"> 
 		<h1>Question 3</h1>
+	</div>	
+
+	<div id="content" class="w3-container">
+	<p>Do you usually feel sad, alone, or hopeless?</p> <!--Input the third survey question-->
+		<a href="#four"  onclick="depressionAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#four"  onclick="depressionAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Do you find yourself having little to no interest in doing things you love?</p> <!--Input the third survey question-->   
-		<a href="#four" onclick="depressionAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#four" onclick="anxietyAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
 </div>
-	
+
 <div class="page" id="four"> <!--Added page four of the survey-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Do you have trouble relaxing?</p> <!--Input the fourth survey question-->       
-		<a href="#five" onclick="anxietyAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#five" onclick="depressionAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
-</div>	
-	
-<div class="page" id="five"> <!--Added page five of the survey-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
+	<div id="content" class="w3-container">
+	<p>Do you find yourself having little to no interest in doing things you love?</p> <!--Inputted the third survey question-->
+		<a href="#five"  onclick="depressionAdd();" class="w3-btn w3-black"> Yes</a> <!--Added the command for a Yes button that will take the user to the next survey question-->
+		<a href="#five"  onclick="depressionAdd();" class="w3-btn w3-black">No</a> <!--Added the command for a No button that will take the user to the next survey question-->
 	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Do you have trouble falling asleep, staying asleep, or oversleeping for extended periods of time?</p> <!--Input the fifth survey question-->        
-		<a href="#six" onclick="depressionAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#six" onclick="anxietyAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
-</div>	
-
-<div class="page" id="six"> <!--Added page six of the survey-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Are you easily annoyed or irritated?</p> <!--Input the sixth survey question-->    
-		<a href="#seven" onclick="anxietyAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#seven" onclick="depressionAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
-</div>	
-
-<div class="page" id="seven"> <!--Added page seventh of the survey-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 7</h1>
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Do you typically have little energy or feel tired?</p> <!--Input the seventh survey question-->        
-		<a href="#eight" onclick="depressionAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="#eight" onclick="anxietyAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
-</div>	
-	
-<div class="page" id="eight"> <!--Added page eight of the survey-->
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 8</h1>
-	</div>
-	
-    	<div id="content" class="w3-container">
-        <p>Are you afraid something awful might happen in your life?</p> <!--Input the eighth survey question-->   
-		<a href="nine" onclick="anxietyAdd();"class="w3-btn w3-black"> Yes </a> <!--Added the command for a Yes button that directs the user to the next survey question-->
-		<a href="nine" onclick="depressionAdd();"class="w3-btn w3-black"> No </a> <!--Added the command for a No button that directs the user to the next survey question-->
-    	</div>
 </div>
-		
-<div class="page" id="nine"> <!--Added a page for the results to be computed--> 
+
+	
+<div class="page" id="five"> <!--Added a page for the results to be computed--> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Click below for your results:</p> <!--Added a caption of text to direct the user to their results-->  
-		<a href="#ten" onclick="Resultspercentage();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
-    	</div>
+	<div id="content" class="w3-container">
+	<p>Click below for your results:</p> <!--Added a subtitle to direct the user to their results--> 
+		<a href="#six" onclick="Resultspercentage();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
+	
+	</div>
+</div>
+	
+
+<div class="page" id="six"> <!--Added a page for the thank you image to be displayed--> 
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Thank You</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Thank you for taking this self-assessment! Your results will be displayed on the next page.</p> <!--Added a subtitle to thank the user for completing the survey--> 
+		<img src="https://media.istockphoto.com/vectors/flag-thank-you-old-school-flag-banner-with-text-vector-id1183769974?k=20&m=1183769974&s=612x612&w=0&h=i7XQ7AGzPy8W1-BVDRhIYBogaiAwz8bsKBVn9cYNhj8=" alt="Thank You" width="460" height="345"> <!--Added this command to display an image--> 
+	
+	</div>
 </div>
 
-<div class="page" id="ten"> <!--Added a page for the results to be displayed--> 
+<div class="page" id="seven"> <!--Added a page for the results to be displayed--> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
-    	<div id="results" class="w3-container"> 
+	<div id="results" class="w3-container">
 	<script>
-        document.write(results) <!--Added the command to display the survey results-->
-		</script>	
-    	</div>
+	document.write(results) <!--Added a command for the display of the survey results-->
+		<script>	
+	</div>
 </div>
 		
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
-	
 </footer>
-
-</body>
+	   
+   </body>
 </html>
