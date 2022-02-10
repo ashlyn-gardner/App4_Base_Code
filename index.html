@@ -39,7 +39,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var anxiety_count = 0;
         var depression_count = 0;
 	var total = 4; <!--Added this command to calculate the survey responses for each category-->
-
 	
         function anxietyAdd(){
             anxiety_count = anxiety_count + 1;
@@ -67,8 +66,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		depressionPercent();
 		anxietyPercent();
 		
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is depression =" + depressionPercent + "%<br> Probability it is anxiety =" + anxietyPercent + "%";
+	var resultText = document.getElementById("results");
+	resultText.innerHTML = "Probability it is depression =" + depressionPercent + "%<br> Probability it is anxiety =" + anxietyPercent + "%";
 		
 	}
 
@@ -174,7 +173,7 @@ img, object{
 	
 	<div id="content" class="w3-container">
 	<p>Click below for your results:</p> <!--Added a subtitle to direct the user to their results--> 
-		<a href="#six" onclick="Resultspercentage();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
+		<a href="#six" onclick="showResults();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
 	
 	</div>
 </div>
