@@ -166,27 +166,14 @@ img, object{
 </div>
 
 	
-<div class="page" id="five"> <!--Added a page for the results to be computed--> 
+<div class="page" id="five"> <!--Added a page for the results to be displayed--> 
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Click below for your results:</p> <!--Added a subtitle to direct the user to their results--> 
-		<a href="#six" onclick="showResults();"class="w3-btn w3-black"> Results </a> <!--Added the command for a Results button that will take the user to their survey results-->
-	
-	</div>
-</div>
-
-<div class="page" id="seven"> <!--Added a page for the results to be displayed--> 
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-	</div>
-	
-	<div id="results" class="w3-container">
-	<script>
-	document.write(results) <!--Added a command for the display of the survey results-->
-		<script>	
+		<button onclick="showResults();">Results</button> <!--Added a command for a results button-->
+		<p id="results"></p> <!--Added a command for the results to be displayed-->
 	</div>
 </div>
 			
